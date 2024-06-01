@@ -28,116 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.RTBMostrar = new System.Windows.Forms.RichTextBox();
+            this.txtInsert = new System.Windows.Forms.TextBox();
+            this.GBListas = new System.Windows.Forms.GroupBox();
+            this.lblInsertNumber = new System.Windows.Forms.Label();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnOrdenarAsc = new System.Windows.Forms.Button();
+            this.btnOrdenarDesc = new System.Windows.Forms.Button();
+            this.btnDeleteNumber = new System.Windows.Forms.Button();
+            this.GBListas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // RTBMostrar
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(11, 132);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(745, 142);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.RTBMostrar.Location = new System.Drawing.Point(17, 132);
+            this.RTBMostrar.Name = "RTBMostrar";
+            this.RTBMostrar.Size = new System.Drawing.Size(618, 65);
+            this.RTBMostrar.TabIndex = 0;
+            this.RTBMostrar.Text = "";
             // 
-            // textBox1
+            // txtInsert
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtInsert.Location = new System.Drawing.Point(145, 35);
+            this.txtInsert.Name = "txtInsert";
+            this.txtInsert.Size = new System.Drawing.Size(317, 20);
+            this.txtInsert.TabIndex = 1;
             // 
-            // groupBox1
+            // GBListas
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 283);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listas";
+            this.GBListas.Controls.Add(this.btnDeleteNumber);
+            this.GBListas.Controls.Add(this.btnOrdenarDesc);
+            this.GBListas.Controls.Add(this.btnOrdenarAsc);
+            this.GBListas.Controls.Add(this.btnInsert);
+            this.GBListas.Controls.Add(this.lblInsertNumber);
+            this.GBListas.Controls.Add(this.txtInsert);
+            this.GBListas.Controls.Add(this.RTBMostrar);
+            this.GBListas.Location = new System.Drawing.Point(12, 15);
+            this.GBListas.Name = "GBListas";
+            this.GBListas.Size = new System.Drawing.Size(657, 213);
+            this.GBListas.TabIndex = 2;
+            this.GBListas.TabStop = false;
+            this.GBListas.Text = "Listas";
             // 
-            // label1
+            // lblInsertNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ingrese un número:";
+            this.lblInsertNumber.AutoSize = true;
+            this.lblInsertNumber.Location = new System.Drawing.Point(27, 38);
+            this.lblInsertNumber.Name = "lblInsertNumber";
+            this.lblInsertNumber.Size = new System.Drawing.Size(98, 13);
+            this.lblInsertNumber.TabIndex = 2;
+            this.lblInsertNumber.Text = "Ingrese un número:";
             // 
-            // button1
+            // btnInsert
             // 
-            this.button1.Location = new System.Drawing.Point(500, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Insertar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInsert.Location = new System.Drawing.Point(500, 29);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(135, 31);
+            this.btnInsert.TabIndex = 3;
+            this.btnInsert.Text = "Insertar";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnOrdenarAsc
             // 
-            this.button2.Location = new System.Drawing.Point(72, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 31);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Ordenar Ascendente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOrdenarAsc.Location = new System.Drawing.Point(72, 78);
+            this.btnOrdenarAsc.Name = "btnOrdenarAsc";
+            this.btnOrdenarAsc.Size = new System.Drawing.Size(135, 31);
+            this.btnOrdenarAsc.TabIndex = 4;
+            this.btnOrdenarAsc.Text = "Ordenar Ascendente";
+            this.btnOrdenarAsc.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnOrdenarDesc
             // 
-            this.button3.Location = new System.Drawing.Point(279, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 31);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Ordenar Descendente";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnOrdenarDesc.Location = new System.Drawing.Point(279, 78);
+            this.btnOrdenarDesc.Name = "btnOrdenarDesc";
+            this.btnOrdenarDesc.Size = new System.Drawing.Size(135, 31);
+            this.btnOrdenarDesc.TabIndex = 5;
+            this.btnOrdenarDesc.Text = "Ordenar Descendente";
+            this.btnOrdenarDesc.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDeleteNumber
             // 
-            this.button4.Location = new System.Drawing.Point(500, 78);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 31);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Eliminar número";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDeleteNumber.Location = new System.Drawing.Point(500, 78);
+            this.btnDeleteNumber.Name = "btnDeleteNumber";
+            this.btnDeleteNumber.Size = new System.Drawing.Size(135, 31);
+            this.btnDeleteNumber.TabIndex = 6;
+            this.btnDeleteNumber.Text = "Eliminar número";
+            this.btnDeleteNumber.UseVisualStyleBackColor = true;
             // 
             // Enunciado2_Listas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 311);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(684, 242);
+            this.Controls.Add(this.GBListas);
             this.Name = "Enunciado2_Listas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enunciado2_Listas";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GBListas.ResumeLayout(false);
+            this.GBListas.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox RTBMostrar;
+        private System.Windows.Forms.TextBox txtInsert;
+        private System.Windows.Forms.GroupBox GBListas;
+        private System.Windows.Forms.Button btnDeleteNumber;
+        private System.Windows.Forms.Button btnOrdenarDesc;
+        private System.Windows.Forms.Button btnOrdenarAsc;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Label lblInsertNumber;
     }
 }
