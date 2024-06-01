@@ -35,7 +35,14 @@
             this.tabDescendente = new System.Windows.Forms.TabPage();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.tabEliminar = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelIngresar = new System.Windows.Forms.Label();
+            this.txtInsertar = new System.Windows.Forms.TextBox();
+            this.btnInsetar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabNumeros.SuspendLayout();
+            this.tabEliminar.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNumeros
@@ -93,6 +100,8 @@
             // 
             // tabEliminar
             // 
+            this.tabEliminar.Controls.Add(this.groupBox2);
+            this.tabEliminar.Controls.Add(this.groupBox1);
             this.tabEliminar.Location = new System.Drawing.Point(4, 22);
             this.tabEliminar.Name = "tabEliminar";
             this.tabEliminar.Padding = new System.Windows.Forms.Padding(3);
@@ -100,6 +109,60 @@
             this.tabEliminar.TabIndex = 4;
             this.tabEliminar.Text = "Eliminar número";
             this.tabEliminar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.btnInsetar);
+            this.groupBox1.Controls.Add(this.txtInsertar);
+            this.groupBox1.Controls.Add(this.labelIngresar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(52, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(636, 138);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Insertar números a una lista:";
+            // 
+            // labelIngresar
+            // 
+            this.labelIngresar.AutoSize = true;
+            this.labelIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIngresar.Location = new System.Drawing.Point(39, 52);
+            this.labelIngresar.Name = "labelIngresar";
+            this.labelIngresar.Size = new System.Drawing.Size(135, 18);
+            this.labelIngresar.TabIndex = 0;
+            this.labelIngresar.Text = "Ingrese un número:";
+            // 
+            // txtInsertar
+            // 
+            this.txtInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInsertar.Location = new System.Drawing.Point(42, 85);
+            this.txtInsertar.Name = "txtInsertar";
+            this.txtInsertar.Size = new System.Drawing.Size(132, 24);
+            this.txtInsertar.TabIndex = 1;
+            // 
+            // btnInsetar
+            // 
+            this.btnInsetar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnInsetar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsetar.Location = new System.Drawing.Point(202, 78);
+            this.btnInsetar.Name = "btnInsetar";
+            this.btnInsetar.Size = new System.Drawing.Size(138, 38);
+            this.btnInsetar.TabIndex = 2;
+            this.btnInsetar.Text = "Insertar";
+            this.btnInsetar.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(52, 208);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(636, 138);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Números insertados:";
             // 
             // Form1
             // 
@@ -114,6 +177,9 @@
             this.Name = "Form1";
             this.Text = "Números";
             this.tabNumeros.ResumeLayout(false);
+            this.tabEliminar.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -126,6 +192,11 @@
         private System.Windows.Forms.TabPage tabDescendente;
         private System.Windows.Forms.TabPage tabBuscar;
         private System.Windows.Forms.TabPage tabEliminar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnInsetar;
+        private System.Windows.Forms.TextBox txtInsertar;
+        private System.Windows.Forms.Label labelIngresar;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
