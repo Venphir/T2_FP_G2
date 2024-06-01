@@ -52,6 +52,12 @@
     <Compile Include="Enunciado 2.Designer.cs">
       <DependentUpon>Enunciado 2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enunciado2_Listas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enunciado2_Listas.Designer.cs">
+      <DependentUpon>Enunciado2_Listas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
