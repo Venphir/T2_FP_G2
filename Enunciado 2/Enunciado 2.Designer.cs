@@ -40,6 +40,10 @@
             this.btnInsetar = new System.Windows.Forms.Button();
             this.txtInsertar = new System.Windows.Forms.TextBox();
             this.labelIngresar = new System.Windows.Forms.Label();
+            this.gbOrdenarA = new System.Windows.Forms.GroupBox();
+            this.btnOrdenar = new System.Windows.Forms.Button();
+            this.gbAscendente = new System.Windows.Forms.GroupBox();
+            this.tabAscendente.SuspendLayout();
             this.tabInsertar.SuspendLayout();
             this.tabNumeros.SuspendLayout();
             this.gbInsertar.SuspendLayout();
@@ -77,13 +81,16 @@
             // 
             // tabAscendente
             // 
+            this.tabAscendente.BackColor = System.Drawing.SystemColors.Info;
+            this.tabAscendente.Controls.Add(this.gbAscendente);
+            this.tabAscendente.Controls.Add(this.btnOrdenar);
+            this.tabAscendente.Controls.Add(this.gbOrdenarA);
             this.tabAscendente.Location = new System.Drawing.Point(4, 22);
             this.tabAscendente.Name = "tabAscendente";
             this.tabAscendente.Padding = new System.Windows.Forms.Padding(3);
             this.tabAscendente.Size = new System.Drawing.Size(737, 400);
             this.tabAscendente.TabIndex = 1;
             this.tabAscendente.Text = "Ordenar de forma ascendente";
-            this.tabAscendente.UseVisualStyleBackColor = true;
             // 
             // tabInsertar
             // 
@@ -165,6 +172,40 @@
             this.labelIngresar.TabIndex = 0;
             this.labelIngresar.Text = "Ingrese un número:";
             // 
+            // gbOrdenarA
+            // 
+            this.gbOrdenarA.BackColor = System.Drawing.Color.Transparent;
+            this.gbOrdenarA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbOrdenarA.Location = new System.Drawing.Point(50, 15);
+            this.gbOrdenarA.Name = "gbOrdenarA";
+            this.gbOrdenarA.Size = new System.Drawing.Size(636, 131);
+            this.gbOrdenarA.TabIndex = 7;
+            this.gbOrdenarA.TabStop = false;
+            this.gbOrdenarA.Text = "Ordenar números de forma ascendente:";
+            // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnOrdenar.Location = new System.Drawing.Point(289, 152);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(169, 42);
+            this.btnOrdenar.TabIndex = 8;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = false;
+            // 
+            // gbAscendente
+            // 
+            this.gbAscendente.BackColor = System.Drawing.Color.Transparent;
+            this.gbAscendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbAscendente.Location = new System.Drawing.Point(50, 225);
+            this.gbAscendente.Name = "gbAscendente";
+            this.gbAscendente.Size = new System.Drawing.Size(636, 131);
+            this.gbAscendente.TabIndex = 8;
+            this.gbAscendente.TabStop = false;
+            this.gbAscendente.Text = "Números ordenados:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +218,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Números";
+            this.tabAscendente.ResumeLayout(false);
             this.tabInsertar.ResumeLayout(false);
             this.tabNumeros.ResumeLayout(false);
             this.gbInsertar.ResumeLayout(false);
@@ -198,6 +240,9 @@
         private System.Windows.Forms.Button btnInsetar;
         private System.Windows.Forms.TextBox txtInsertar;
         private System.Windows.Forms.Label labelIngresar;
+        private System.Windows.Forms.GroupBox gbOrdenarA;
+        private System.Windows.Forms.Button btnOrdenar;
+        private System.Windows.Forms.GroupBox gbAscendente;
     }
 }
 
