@@ -52,6 +52,7 @@
     <Compile Include="Enunciado 2.Designer.cs">
       <DependentUpon>Enunciado 2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Enunciado 2.resx">
