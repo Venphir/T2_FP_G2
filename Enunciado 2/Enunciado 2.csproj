@@ -64,6 +64,9 @@
     <EmbeddedResource Include="Enunciado 2.resx">
       <DependentUpon>Enunciado 2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Enunciado2_Listas.resx">
+      <DependentUpon>Enunciado2_Listas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
