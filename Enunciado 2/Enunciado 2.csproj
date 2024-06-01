@@ -52,20 +52,11 @@
     <Compile Include="Enunciado 2.Designer.cs">
       <DependentUpon>Enunciado 2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enunciado2_Listas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Enunciado2_Listas.Designer.cs">
-      <DependentUpon>Enunciado2_Listas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lista.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Enunciado 2.resx">
       <DependentUpon>Enunciado 2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Enunciado2_Listas.resx">
-      <DependentUpon>Enunciado2_Listas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
