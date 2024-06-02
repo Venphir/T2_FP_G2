@@ -21,6 +21,9 @@ namespace Enunciado_2
         {
             InitializeComponent();
             G2_lista = new Lista();
+            this.btnAscendente.Click += new System.EventHandler(this.btnAscendente_Click); // Evento Click del botón btnAscendente
+            this.btnDescendente.Click += new System.EventHandler(this.btnDescendente_Click); // Evento Click del botón btnDescendente
+
         }
         /// <summary>
         /// Se muestra la lista de números en el formulario usando recursividad
@@ -54,17 +57,18 @@ namespace Enunciado_2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnInsetar_Click(object sender, EventArgs e)
+        private void btnInsertar_Click(object sender, EventArgs e)
         {
             try
             {
                 double G2_numero;
-                if (double.TryParse(txtInsertar.Text, out G2_numero))
+                if (double.TryParse(txtNumero.Text, out G2_numero))
                 {
                     G2_lista.AgregarNumero(G2_numero);
-                    txtInsertar.Clear(); // Limpia el cuadro de texto
+                    txtNumero.Clear(); // Limpia el cuadro de texto
                     gbMostrar.Controls.Clear(); // Limpia el panel antes de mostrar los números
                     MostrarNumeros(G2_lista.G2_numeros, 0, 10, 20); // Muestra los números en el formulario
+
                 }
                 else
                 {
@@ -77,5 +81,134 @@ namespace Enunciado_2
             }
         }
 
+        /// <summary>
+        /// Se ordenan los números de la lista de forma ascendente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAscendente_Click(object sender, EventArgs e)
+        {
+            // Ordenar los números
+            G2_lista.OrdenarNumeros(0, G2_lista.G2_numeros.Count - 1);
+
+            // Limpiar el GroupBox antes de mostrar los números
+            gbMostrar.Controls.Clear();
+
+            // Mostrar los números ordenados
+            MostrarNumeros(G2_lista.G2_numeros, 0, 10, 20);
+        }
+
+        /// <summary>
+        /// Se ordenan los números de la lista de forma descendente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDescendente_Click(object sender, EventArgs e)
+        {
+            // Ordenar los números
+            G2_lista.OrdenarNumerosDesc(0, G2_lista.G2_numeros.Count - 1);
+
+            // Limpiar el GroupBox antes de mostrar los números
+            gbMostrar.Controls.Clear();
+
+            // Mostrar los números ordenados
+            MostrarNumeros(G2_lista.G2_numeros, 0, 10, 20);
+        }
+
+        /// <summary>
+        /// Se busca un número en la lista de números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double G2_numero;
+                if (double.TryParse(txtNumero.Text, out G2_numero))
+                {
+                    // Restablecer el color de todos los números
+                    foreach (Label lbl in gbMostrar.Controls)
+                    {
+                        lbl.ForeColor = Color.Black;
+                    }
+
+                    // Variable para verificar si se encontró el número
+                    bool G2_encontrado = false;
+
+                    // Buscar el número en el GroupBox
+                    foreach (Label lbl in gbMostrar.Controls)
+                    {
+                        if (lbl.Text == G2_numero.ToString())
+                        {
+                            // Resaltar el número encontrado
+                            lbl.ForeColor = Color.Red;
+                            G2_encontrado = true;
+                        }
+                    }
+
+                    if (G2_encontrado)
+                    {
+                        MessageBox.Show("Número encontrado: " + G2_numero, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Si llegamos aquí, el número no se encontró
+                        throw new Exception("Número no encontrado.");
+                    }
+                }
+                else
+                {
+                    throw new FormatException("Por favor, ingresa un número válido.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Se elimina un número de la lista de números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double G2_numero;
+                if (double.TryParse(txtNumero.Text, out G2_numero))
+                {
+                    // Buscar el número en la lista
+                    int G2_indice = G2_lista.BuscarNumero(G2_numero, 0, G2_lista.G2_numeros.Count - 1);
+
+                    if (G2_indice != -1)
+                    {
+                        // Eliminar todas las ocurrencias del número de la lista
+                        G2_lista.G2_numeros.RemoveAll(num => num == G2_numero);
+
+                        // Limpiar el GroupBox y mostrar los números restantes
+                        gbMostrar.Controls.Clear();
+                        MostrarNumeros(G2_lista.G2_numeros, 0, 10, 20);
+
+                        MessageBox.Show("Número eliminado: " + G2_numero, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Si llegamos aquí, el número no se encontró
+                        throw new Exception("Número no encontrado.");
+                    }
+                }
+                else
+                {
+                    throw new FormatException("Por favor, ingresa un número válido.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
