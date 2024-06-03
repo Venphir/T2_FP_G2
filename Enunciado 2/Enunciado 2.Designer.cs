@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gbListas = new System.Windows.Forms.GroupBox();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAscendente = new System.Windows.Forms.Button();
-            this.btnDescendente = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.gbMostrar = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDescendente = new System.Windows.Forms.Button();
+            this.btnAscendente = new System.Windows.Forms.Button();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
             this.gbListas.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,65 +60,16 @@
             this.gbListas.TabStop = false;
             this.gbListas.Text = "Listas";
             // 
-            // lblNumero
+            // btnBuscar
             // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(53, 67);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(98, 13);
-            this.lblNumero.TabIndex = 0;
-            this.lblNumero.Text = "Ingrese un número:";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(169, 64);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(194, 20);
-            this.txtNumero.TabIndex = 1;
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnInsertar.Location = new System.Drawing.Point(24, 144);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(127, 37);
-            this.btnInsertar.TabIndex = 2;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = false;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnDescendente);
-            this.groupBox1.Controls.Add(this.btnAscendente);
-            this.groupBox1.Location = new System.Drawing.Point(169, 116);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(382, 100);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Métodos de Ordenamiento";
-            // 
-            // btnAscendente
-            // 
-            this.btnAscendente.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnAscendente.Location = new System.Drawing.Point(5, 28);
-            this.btnAscendente.Name = "btnAscendente";
-            this.btnAscendente.Size = new System.Drawing.Size(170, 37);
-            this.btnAscendente.TabIndex = 4;
-            this.btnAscendente.Text = "Ordenar Ascendentemente";
-            this.btnAscendente.UseVisualStyleBackColor = false;
-            this.btnAscendente.Click += new System.EventHandler(this.btnAscendente_Click);
-            // 
-            // btnDescendente
-            // 
-            this.btnDescendente.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnDescendente.Location = new System.Drawing.Point(207, 28);
-            this.btnDescendente.Name = "btnDescendente";
-            this.btnDescendente.Size = new System.Drawing.Size(170, 37);
-            this.btnDescendente.TabIndex = 5;
-            this.btnDescendente.Text = "Ordenar Descendentemente";
-            this.btnDescendente.UseVisualStyleBackColor = false;
-            this.btnDescendente.Click += new System.EventHandler(this.btnDescendente_Click);
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnBuscar.Location = new System.Drawing.Point(574, 126);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(127, 37);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
@@ -140,16 +91,65 @@
             this.gbMostrar.TabStop = false;
             this.gbMostrar.Text = "Lista Insertada:";
             // 
-            // btnBuscar
+            // groupBox1
             // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnBuscar.Location = new System.Drawing.Point(574, 126);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(127, 37);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.groupBox1.Controls.Add(this.btnDescendente);
+            this.groupBox1.Controls.Add(this.btnAscendente);
+            this.groupBox1.Location = new System.Drawing.Point(169, 116);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(382, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Métodos de Ordenamiento";
+            // 
+            // btnDescendente
+            // 
+            this.btnDescendente.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnDescendente.Location = new System.Drawing.Point(207, 28);
+            this.btnDescendente.Name = "btnDescendente";
+            this.btnDescendente.Size = new System.Drawing.Size(170, 37);
+            this.btnDescendente.TabIndex = 5;
+            this.btnDescendente.Text = "Ordenar Descendentemente";
+            this.btnDescendente.UseVisualStyleBackColor = false;
+            this.btnDescendente.Click += new System.EventHandler(this.btnDescendente_Click);
+            // 
+            // btnAscendente
+            // 
+            this.btnAscendente.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnAscendente.Location = new System.Drawing.Point(5, 28);
+            this.btnAscendente.Name = "btnAscendente";
+            this.btnAscendente.Size = new System.Drawing.Size(170, 37);
+            this.btnAscendente.TabIndex = 4;
+            this.btnAscendente.Text = "Ordenar Ascendentemente";
+            this.btnAscendente.UseVisualStyleBackColor = false;
+            this.btnAscendente.Click += new System.EventHandler(this.btnAscendente_Click);
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnInsertar.Location = new System.Drawing.Point(24, 144);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(127, 37);
+            this.btnInsertar.TabIndex = 2;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(169, 64);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(194, 20);
+            this.txtNumero.TabIndex = 1;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(53, 67);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(98, 13);
+            this.lblNumero.TabIndex = 0;
+            this.lblNumero.Text = "Ingrese un número:";
             // 
             // Form1
             // 
@@ -162,6 +162,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Números";
             this.gbListas.ResumeLayout(false);
             this.gbListas.PerformLayout();
