@@ -47,6 +47,7 @@ namespace Enunciado_1
             G2_Raza = raza;
             G2_Dueño = dueño;
             G2_Unidad = unidad;
+
         }
     }
     

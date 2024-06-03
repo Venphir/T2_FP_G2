@@ -203,9 +203,9 @@ namespace Enunciado_1
 
                 // Crear y configurar los controles para mostrar la información de la mascota
                 Label lblNombre = new Label();
-                lblNombre.Text = "Nombre: " + G2_mascota.G2_Nombre;
+                lblNombre.Text = $"{G2_mascota.G2_Nombre}:";
                 Label lblEdad = new Label();
-                lblEdad.Text = "Edad: " + G2_mascota.G2_Edad.ToString() + " " + G2_mascota.G2_Unidad;
+                lblEdad.Text = $"{G2_mascota.G2_Unidad}: " + G2_mascota.G2_Edad.ToString();
                 Label lblRaza = new Label();
                 lblRaza.Text = "Raza: " + G2_mascota.G2_Raza;
                 Label lblDueño = new Label();
